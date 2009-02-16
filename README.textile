@@ -1,11 +1,21 @@
-h1. emusic: A Downloader for eMusic.com files, lovingly written in ruby
+h2. emusic: A Downloader for eMusic.com files, lovingly written in ruby
+
 Written by Nicholas Rowe in early 2009
 
-h2. Introduction
+emusic aims to be a drop dead easy way to download music from .emx files.  To get started, download one of these files and then, after installlation try: 
+
+@code@emusic yourdownloadedfile.emx.  
+
+It's that easy!  There are some other more advanced and neat options, but this is all you need to know to get going.
 
 h2. Installation
 
+Installation is going to eventually be really easy... Because this is going to become a gem.  So, you'll have to do something like:
+
+@code@gem install emusic-downloader
+
 h2. Options
 
+Then of course there are some cool options...
 
 
