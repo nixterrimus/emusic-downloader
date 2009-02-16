@@ -1,5 +1,13 @@
 #!/usr/bin/ruby 
 
+# emusic takes the name of an XML file containing URLs for
+# emusic music and downloads them.  There are some neat options
+# for choosing where your files are stored.
+#
+# Author::    Nicholas Rowe  (mailto:nixterrimus@gmail.com)
+# Copyright:: Written by Nicholas Rowe in early 2009
+# License::   Not Currently assigned
+
 require 'rubygems'
 require 'optparse'
 require 'emusic.rb'
