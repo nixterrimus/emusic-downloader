@@ -1,0 +1,54 @@
+#!/usr/bin/ruby 
+
+require 'rubygems'
+require 'optparse'
+require 'emusic.rb'
+
+class EMusic
+	VERSION = '0.5'
+	
+	def initialize(arguments, stdin)
+
+		# Process the arguments, starting with pulling the filename off the front
+		if arguments.size>0
+			file = arguments[0]
+			options = {}
+			OptionParser.new do |opts|
+				opts.banner = "Usage: emusic filename [options]"
+				opts.on("--version"){output_version; exit 0}
+				opts.on("-d directory", "--directory directory", "Save to a specified directory") do |directory|
+					options[:directory] = directory
+				end
+				opts.on("-c directory", "--create directory", "Creates directory and saves to it") do |directory|
+					options[:directory] = directory
+					options[:force_create] = true
+				end
+				opts.on("-r", "--remove", "Removes the source file from eMusic after donwloading"){options[:remove] = true}
+				opts.on("-v", "--verbose", "Outputs, verbosely"){options[:verbose] = true}
+				opts.on_tail("-h", "--help", "Show this message") do
+					puts opts
+					exit
+				end
+			end.parse! rescue error
+			EMusicUtility.download_media(file, options)
+		else
+			puts "emusic: Missing source file, use -h switch to see all options"
+			exit
+		end
+	end
+
+	def output_version()
+		puts "emusic: version #{VERSION} written by Nicholas Rowe"
+	end
+
+	def error
+		puts "emusic: Invalid option(s), use -h switch to see all options"
+		exit
+	end
+
+end
+
+
+app = EMusic.new(ARGV, STDIN)
+
+

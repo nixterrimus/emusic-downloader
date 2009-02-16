@@ -1,0 +1,6 @@
+bin/emusic
+Manifest
+emusic-downloader.gemspec
+Rakefile
+lib/emusic.rb
+README.textile
