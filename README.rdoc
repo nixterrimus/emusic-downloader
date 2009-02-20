@@ -4,18 +4,18 @@ Written by Nicholas Rowe in early 2009
 
 emusic aims to be a drop dead easy way to download music from .emx files.  To get started, download one of these files and then, after installlation try: 
 
-+emusic yourdownloadedfile.emx+::  
+emusic yourdownloadedfile.emx 
 
 It's that easy!  There are some other more advanced and neat options, but this is all you need to know to get going.
 
 == Installation
 
-Installation is going to eventually be really easy... Because this is going to become a gem.  So, you'll have to do something like:
+Installation is really easy, install this as a gem!
 
 +gem install emusic-downloader+::
 
 == Options
 
-Then of course there are some cool options...
+Try emusic --help
 
 
