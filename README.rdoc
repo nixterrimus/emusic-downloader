@@ -18,4 +18,3 @@ Installation is really easy, install this as a gem!
 
 Try emusic --help
 
-
